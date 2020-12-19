@@ -1,8 +1,19 @@
-#inner {
+.p-shadow-1 {
+    box-shadow: none !important;
+}
+.p-shadow-2 {
+    box-shadow: none !important;
+}
+
+.p-shadow-3 {
+    box-shadow: none !important;
+}
+
+.inner {
     display: table;
     margin: 0 auto;
 }
 
-#outer {
+.outer {
     width:100%
 }

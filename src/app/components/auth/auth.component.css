@@ -1,13 +1,12 @@
-.section {
+.p-grid .p-flex-column .p-col {
     width: 20rem;
-    height: 12rem;
+    height: 20rem !important;
     border: 1px solid #32d4e2;
     border-radius: 6px;
 }
 
 button {
     width: 100%;
-    margin: 0.2rem 0.2rem;
     color: #232323;
     background: transparent;
     border: 1px solid #232323;
@@ -21,7 +20,6 @@ button {
 
 button:hover {
     width: 100%;
-    margin: 0.2rem 0.2rem;
     color: #47A1AA;
     background: transparent;
     border: 1px solid #47A1AA;
@@ -44,3 +42,14 @@ button:hover {
 #outer {
     width:100%;
 }
+
+input {
+    width: 97.5%;
+    font-size: 20px;
+}
+
+.p-col {
+    margin: 0.1rem !important;
+    padding: 3px 6px 3px 6px !important;
+}
+
