@@ -1,0 +1,47 @@
+button {
+    width: 100%;
+    margin: 0.2rem 0.2rem;
+    color: #232323;
+    background: transparent;
+    border: 1px solid #232323;
+    border-radius: 4px;
+    position: relative;
+    letter-spacing: .1em;
+    font-size: 20px;
+    font-family: Roboto-Italic, sans-serif;
+    cursor: pointer;
+}
+
+button:hover {
+    width: 100%;
+    margin: 0.2rem 0.2rem;
+    color: #47A1AA;
+    background: transparent;
+    border: 1px solid #47A1AA;
+    position: relative;
+    letter-spacing: .1em;
+    font-size: 20px;
+    font-family: Roboto-Italic, sans-serif;
+    cursor: pointer;
+}
+
+.labels {
+    font-size: 22px;
+    font-family: Roboto-Regular, sans-serif;
+    padding: 4px 4px 4px 4px;
+    text-align: center;
+    width: 99%;
+    margin: 0.1rem 0.1rem !important;
+}
+
+.section {
+    width: 20rem;
+    height: 22rem;
+    border: 1px solid #32d4e2;
+    border-radius: 6px;
+}
+
+.small-labels {
+    font-size: 20px;
+    font-family: Roboto-Regular, sans-serif;
+}
