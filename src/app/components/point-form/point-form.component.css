@@ -1,5 +1,20 @@
+.p-col {
+    padding: 2px 7px 0px 7px;
+    width: 0px;
+    height: 30px;
+}
+
+.buttons {
+    margin-top: 1rem;
+}
+
+.p-radiobutton-box .p-highlight {
+    visibility: hidden;
+}
+
 button {
     width: 100%;
+    height: 3rem;
     margin: 0.2rem 0.2rem;
     color: #232323;
     background: transparent;
@@ -14,6 +29,7 @@ button {
 
 button:hover {
     width: 100%;
+    height: 3rem;
     margin: 0.2rem 0.2rem;
     color: #47A1AA;
     background: transparent;
@@ -28,10 +44,9 @@ button:hover {
 .labels {
     font-size: 22px;
     font-family: Roboto-Regular, sans-serif;
-    /*padding: 6px 10px 6px 10px;*/
     text-align: center;
-    width: 99%;
-    margin: 0.6rem 1rem !important;
+    width: 94%;
+    margin: 1.2rem 1.2rem !important;
 }
 
 .section {
@@ -47,75 +62,42 @@ button:hover {
     font-family: Roboto-Regular, sans-serif;
 }
 
-/*.p-field-radiobutton {*/
-/*    margin-bottom: 0px !important;*/
-/*}*/
+p-inputNumber::ng-deep input {
+    width: 31.5rem;
+    font-size: 20px;
+}
 
-/*p-inputNumber.ng-valid.ng-touched.ng-dirty {*/
-/*    border: 1px solid red !important;*/
-/*    background: rgba(255, 0, 0, 0.35);*/
-/*    box-shadow: 0 0 5px 1px rgba(255, 0, 0, 0.2) inset !important;*/
-/*    width: 100%;*/
-/*}*/
+p-radioButton::ng-deep [aria-checked="false"]:after {
+    pointer-events: none;
+    width: 11px;
+    height:11px;
+    border-radius: 11px;
+    top: -18px;
+    left: 4px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #32D4E2;
 
-/*p-inputnumber.ng-dirty.ng-invalid .ui-inputtext{*/
-/*    width: 97.5%;*/
-/*    font-size: 20px;*/
-/*}*/
-
-/*.p-field-radiobutton:after {*/
-/*    width: 11px;*/
-/*    height:11px;*/
-/*    border-radius: 11px;*/
-/*    !*top: -18px;*!*/
-/*    left: -35px;*/
-/*    position: relative;*/
-/*    background-color: white;*/
-/*    content: '';*/
-/*    display: inline-block;*/
-/*    visibility: visible;*/
-/*    border: 2px solid #32D4E2;*/
-/*}*/
-
-/*p-radioButton.p-component.p-radiobutton-checked {*/
-/*    width: 11px;*/
-/*    height:11px;*/
-/*    border-radius: 11px;*/
-/*    !*top: -18px;*!*/
-/*    left: -35px;*/
-/*    position: relative;*/
-/*    background-color: white;*/
-/*    content: '';*/
-/*    display: inline-block;*/
-/*    visibility: visible;*/
-/*    border: 2px solid #47A1AA;*/
-/*}*/
-
-/*.p-field-radiobutton:hover:after {*/
-/*    width: 11px;*/
-/*    height:11px;*/
-/*    border-radius: 11px;*/
-/*    !*top: -18px;*!*/
-/*    left: -35px;*/
-/*    position: relative;*/
-/*    background-color: white;*/
-/*    content: '';*/
-/*    display: inline-block;*/
-/*    visibility: visible;*/
-/*    border: 2px solid #47A1AA;*/
-/*}*/
+}
+p-radioButton::ng-deep .p-radiobutton-box .p-highlight{
+    width: 0px;
+}
 
 
-/*.p-field-radiobutton .p-radiobutton-checked{*/
-/*    width: 11px;*/
-/*    height:11px;*/
-/*    border-radius: 11px;*/
-/*    top: -18px;*/
-/*    left: 4px;*/
-/*    position: relative;*/
-/*    background-color: white;*/
-/*    content: '';*/
-/*    display: inline-block;*/
-/*    visibility: visible;*/
-/*    border: 2px solid #47A1AA;*/
-/*}*/
+p-radioButton::ng-deep [aria-checked="true"]:after{
+    pointer-events: none;
+    width: 11px;
+    height:11px;
+    border-radius: 11px;
+    top: -18px;
+    left: 4px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #47A1AA;
+}
