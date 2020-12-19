@@ -31,3 +31,16 @@ button:hover {
     font-family: Roboto-Italic, sans-serif;
     cursor: pointer;
 }
+
+#inner {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#outer {
+    width:100%;
+}
