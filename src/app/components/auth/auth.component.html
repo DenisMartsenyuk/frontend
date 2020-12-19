@@ -8,17 +8,17 @@
                             <div class="p-col">
                                 <div class="p-mb-2">
                                     <div class="demo-container p-p-1">
-                                        <input type="text" placeholder="Логин" pInputText [(ngModel)]="user.username" class="p-d-block p-mx-auto"/>
+                                        <input type="text" placeholder="Логин" pInputText [(ngModel)]="user.username" class="p-d-block p-mx-auto" (click)="dropMessage()"/>
                                     </div>
                                 </div>
                                 <div class="p-mb-2">
                                     <div class="demo-container p-p-1">
-                                        <input type="password" placeholder="Пароль" [feedback]="false" maxlength="30" pPassword [(ngModel)]="user.password" class="p-d-block p-mx-auto"/>
+                                        <input type="password" placeholder="Пароль" [feedback]="false" maxlength="30" pPassword [(ngModel)]="user.password" class="p-d-block p-mx-auto" (click)="dropMessage()"/>
                                     </div>
                                 </div>
                                 <div class="p-mb-2">
                                     <div class="demo-container p-p-1">
-                                        <p-messages></p-messages>
+                                        <label class="error-text"> {{message}}</label>
                                     </div>
                                 </div>
                                 <div class="p-mb-2">

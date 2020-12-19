@@ -5,6 +5,7 @@ import { User } from '../models/user';
 import { Router } from "@angular/router";
 import { PointService } from "./point.service";
 import {StorageService} from "./storage.service";
+import {Observable, Subject} from "rxjs";
 
 @Injectable({
     providedIn: 'root',
@@ -13,6 +14,9 @@ export class AuthService {
 
   public serverUrl = 'http://localhost:7777';
   public controllerMapping = '/user';
+
+  private message = new Subject<any>();
+
 
   constructor(private http: HttpClient, private router: Router, private pointService: PointService, private storageService: StorageService) { }
 
@@ -51,20 +55,24 @@ export class AuthService {
   }
 
   private messageNotLogin() {
-    console.log("Войти не удалось. Пользователь не существует или данные некорректны."); //todo заменить на тост
+    this.messageSetEvent("Войти не удалось. Пользователь не существует или данные некорректны.");
   }
 
   private messageNotRegister() {
-    console.log("Зарегистрироваться не удалось. Пользователь уже существует."); //todo заменить на тост
-  }
-
-  private messageRegister() {
-    console.log("Пользователь зарегистрирован!"); //todo заменить на тост
+    this.messageSetEvent("Зарегистрироваться не удалось. Пользователь уже существует.");
   }
 
   logout() {
     Cookie.delete('bearer_token');
     this.storageService.removePoints();
     this.router.navigate(['/auth'])
+  }
+
+  messageSetEvent(message) {
+    this.message.next(message);
+  }
+
+  messageGetEvent(): Observable <any> {
+    return this.message.asObservable ();
   }
 }
