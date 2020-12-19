@@ -23,6 +23,8 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import {StorageService} from "./services/storage.service";
 import {PointService} from "./services/point.service";
 import { CustomFooterComponent } from './components/custom-footer/custom-footer.component';
+import {MessageModule} from "primeng/message";
+import {MessagesModule} from 'primeng/messages';
 
 const routes: Routes =[
     {path: 'auth', component: StartPageComponent},
@@ -31,7 +33,7 @@ const routes: Routes =[
 ];
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, ButtonModule, HttpClientModule, PasswordModule, InputTextModule, TableModule, RadioButtonModule , InputNumberModule, RouterModule.forRoot(routes), ReactiveFormsModule],
+    imports: [BrowserModule, FormsModule, ButtonModule, HttpClientModule, PasswordModule, InputTextModule, TableModule, RadioButtonModule, InputNumberModule, RouterModule.forRoot(routes), ReactiveFormsModule, MessageModule, MessagesModule],
     declarations: [ AppComponent, StartPageComponent, MainPageComponent, AuthComponent, TableComponent, GraphComponent, PointFormComponent, CustomHeaderComponent, ErrorPageComponent, CustomFooterComponent ],
     bootstrap:    [ AppComponent ],
     providers: [

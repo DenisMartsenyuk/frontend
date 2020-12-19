@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Subscription} from "rxjs";
 import {StorageService} from "../../services/storage.service";
-import {PointFormComponent} from "../point-form/point-form.component";
 import {GraphService} from "../../services/graph.service";
 import {PointService} from "../../services/point.service";
 import {Point} from "../../models/point";

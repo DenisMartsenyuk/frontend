@@ -21,7 +21,7 @@ export class AuthService {
       username: user.username,
       password: user.password
     };
-    this.logout(); //todo мб и убрать можно
+    this.logout();
     this.http.post(this.serverUrl + this.controllerMapping + '/login', body).subscribe(
         data => this.initUser(data),
         error => this.messageNotLogin()

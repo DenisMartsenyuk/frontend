@@ -38,7 +38,8 @@
 }
 
 .section {
-    width: 20rem;
+    margin: 1rem 0.25rem 1rem 0.25rem;
+    width: 33rem;
     height: 22rem;
     border: 1px solid #32d4e2;
     border-radius: 6px;

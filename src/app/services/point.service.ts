@@ -8,7 +8,7 @@ import { StorageService } from "./storage.service";
 })
 export class PointService {
 
-  public serverUrl = 'http://localhost:7777'; //todo мб отправитель запросов вынести
+  public serverUrl = 'http://localhost:7777';
   public controllerMapping = '/points';
 
 
@@ -22,22 +22,19 @@ export class PointService {
       r: point.r
     };
     this.http.post(this.serverUrl + this.controllerMapping + '/new', body).subscribe(
-        point => this.updateTable(point),
-        err => alert('Invalid Credentials') //todo сделать что-то
+        point => this.updateTable(point)
     );
   }
 
   deletePoints() {
     this.http.delete(this.serverUrl + this.controllerMapping + '/delete').subscribe(
-        data => this.clearTable(), //todo мб как-то обработать
-        err => alert('Invalid Credentials') //todo сделать что-то
+        data => this.clearTable()
     );
   }
 
   getAllPoints() {
     this.http.get(this.serverUrl + this.controllerMapping + '/all').subscribe(
-        data => this.getPoints(data), //todo мб как-то обработать
-        err => alert('Invalid Credentials') //todo сделать что-то
+        data => this.getPoints(data)
     );
   }
 

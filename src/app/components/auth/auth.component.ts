@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {User} from '../../models/user';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {MessageService} from "primeng/api";
 
 @Component({
   selector: 'auth',
@@ -10,7 +13,9 @@ import {User} from '../../models/user';
 export class AuthComponent implements OnInit {
   user: User = new User();
 
-  constructor(private authService: AuthService) { };
+  msgs: [];
+
+  constructor(private authService: AuthService, private messageService: MessageService) { };
 
   ngOnInit(): void {
   }
@@ -34,6 +39,7 @@ export class AuthComponent implements OnInit {
   }
 
   addSingle() {
+    this.messageService.add({severity:'success', summary:'Service Message', detail:'Via MessageService'});
     console.log('Введите логин и пароль');
   }
 

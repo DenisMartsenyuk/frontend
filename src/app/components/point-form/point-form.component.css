@@ -28,14 +28,15 @@ button:hover {
 .labels {
     font-size: 22px;
     font-family: Roboto-Regular, sans-serif;
-    padding: 4px 4px 4px 4px;
+    /*padding: 6px 10px 6px 10px;*/
     text-align: center;
     width: 99%;
-    margin: 0.1rem 0.1rem !important;
+    margin: 0.6rem 1rem !important;
 }
 
 .section {
-    width: 20rem;
+    margin: 1rem 0.25rem 1rem 0.2rem;
+    width: 33rem;
     height: 22rem;
     border: 1px solid #32d4e2;
     border-radius: 6px;
@@ -44,4 +45,8 @@ button:hover {
 .small-labels {
     font-size: 20px;
     font-family: Roboto-Regular, sans-serif;
+}
+
+.p-field-radiobutton {
+    margin-bottom: 0px !important;
 }

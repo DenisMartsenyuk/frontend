@@ -1,7 +1,17 @@
 header {
-    margin-top: 2rem;
-    padding-top: 2rem;
     border-bottom: 1px solid #32d4e2;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+label {
+    font-size: 20px;
+    font-family: Roboto-Regular, sans-serif;
+    padding: 6px 6px 6px 6px;
+    text-align: center;
+    width: 99%;
+    margin: 0.2rem 0.2rem !important;
 }
 
 button {

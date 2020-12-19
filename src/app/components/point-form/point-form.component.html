@@ -15,49 +15,49 @@
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-x" value="-3" [(ngModel)]="x"></p-radioButton>
-                <label>-3</label>
+                <label class="small-labels">-3</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-x" value="-2" [(ngModel)]="x"></p-radioButton>
-                <label>-2</label>
+                <label class="small-labels">-2</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-x" value="-1"  [(ngModel)]="x"></p-radioButton>
-                <label>-1</label>
+                <label class="small-labels">-1</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-x" value="0" [(ngModel)]="x"></p-radioButton>
-                <label>0</label>
+                <label class="small-labels">0</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-x" value="1" [(ngModel)]="x"></p-radioButton>
-                <label>1</label>
+                <label class="small-labels">1</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-x" value="2" [(ngModel)]="x"></p-radioButton>
-                <label>2</label>
+                <label class="small-labels">2</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-x" value="3" [(ngModel)]="x"></p-radioButton>
-                <label>3</label>
+                <label class="small-labels">3</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-x" value="4" [(ngModel)]="x"></p-radioButton>
-                <label>4</label>
+                <label class="small-labels">4</label>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
 
     <div class="p-col">
         <div class="p-d-block p-mx-auto">
-            <p-inputNumber placeholder="(-3;3)" [useGrouping]="false" [minFractionDigits]="5" [maxFractionDigits]="5" [min]="-2.99999" [max]="2.99999" [(ngModel)]="y"></p-inputNumber>
+            <p-inputNumber class="input" placeholder="(-3;3)" [useGrouping]="false" [minFractionDigits]="5" [maxFractionDigits]="5" [min]="-2.99999" [max]="2.99999" [(ngModel)]="y"></p-inputNumber>
         </div>
     </div>
 
@@ -85,67 +85,67 @@
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-r" value="-4" [(ngModel)]="r" (change)="changeR(this)"></p-radioButton>
-                <label>-4</label>
+                <label class="small-labels">-4</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-r" value="-3" [(ngModel)]="r" (change)="changeR(this)"></p-radioButton>
-                <label>-3</label>
+                <label class="small-labels">-3</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-r" value="-2" [(ngModel)]="r" (change)="changeR(this)"></p-radioButton>
-                <label>-2</label>
+                <label class="small-labels">-2</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-r" value="-1"  [(ngModel)]="r" (change)="changeR(this)"></p-radioButton>
-                <label>-1</label>
+                <label class="small-labels">-1</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-r" value="0" [(ngModel)]="r" (change)="changeR(this)"></p-radioButton>
-                <label>0</label>
+                <label class="small-labels">0</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-r" value="1" [(ngModel)]="r" (change)="changeR(this)"></p-radioButton>
-                <label>1</label>
+                <label class="small-labels">1</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-r" value="2" [(ngModel)]="r" (change)="changeR(this)"></p-radioButton>
-                <label>2</label>
+                <label class="small-labels">2</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-r" value="3" [(ngModel)]="r" (click)="changeR(this)"></p-radioButton>
-                <label>3</label>
+                <label class="small-labels">3</label>
             </div>
         </div>
         <div class="p-col">
             <div class="p-field-radiobutton">
                 <p-radioButton name="group-r" value="4" [(ngModel)]="r" (click)="changeR(this)"></p-radioButton>
-                <label>4</label>
+                <label class="small-labels">4</label>
             </div>
         </div>
     </div>
 
     <div class="p-grid">
         <div class="p-col">
-            <div class="box">
+            <div class="demo-container p-p-3">
                 <button class="p-d-block p-mx-auto" pButton type="button" label="Отправить" (click)="newPoint()"></button>
             </div>
         </div>
         <div class="p-col">
-            <div class="box">
+            <div class="demo-container p-p-3">
                 <button class="p-d-block p-mx-auto" pButton type="button" label="Очистить" (click)="deletePoints()"></button>
             </div>
         </div>
