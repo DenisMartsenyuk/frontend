@@ -39,7 +39,7 @@ export class AuthService {
       password: user.password,
     };
     this.http.post(this.serverUrl + this.controllerMapping + '/register', body).subscribe(
-        data => this.messageNotRegister(),
+        data => this.messageRegister(),
         error => this.messageNotRegister()
     );
   }
@@ -54,12 +54,16 @@ export class AuthService {
     Cookie.set("bearer_token", 'Bearer ' + data.token.toString());
   }
 
+  public messageRegister() {
+    this.messageSetEvent("Пользователь успешно зарегистрирован.");
+  }
+
   private messageNotLogin() {
-    this.messageSetEvent("Войти не удалось. Пользователь не существует или данные некорректны.");
+    this.messageSetEvent("Ошибка: Войти не удалось. Пользователь не существует или данные некорректны.");
   }
 
   private messageNotRegister() {
-    this.messageSetEvent("Зарегистрироваться не удалось. Пользователь уже существует.");
+    this.messageSetEvent("Ошибка: Зарегистрироваться не удалось. Пользователь уже существует.");
   }
 
   logout() {

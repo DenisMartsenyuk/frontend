@@ -12,6 +12,7 @@ export class AuthComponent implements OnInit {
   user: User = new User();
   message: string;
   eventMessage: Subscription;
+  typeMessage: string;
 
   constructor(private authService: AuthService) { };
 
@@ -40,10 +41,15 @@ export class AuthComponent implements OnInit {
   }
 
   fieldsError() {
-    this.setMessage('Введите логин и пароль');
+    this.setMessage('Ошибка: Введите логин и пароль');
   }
 
   setMessage(message) {
+    if (message.substr(0, 6) == "Ошибка") {
+      this.typeMessage = 'error-message';
+    } else {
+      this.typeMessage = 'info-message';
+    }
     this.message = message;
   }
 
